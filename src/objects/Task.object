@@ -1,0 +1,924 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Close</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>DeleteSeries</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>NewTask</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>ActivityDate</fullName>
+    </fields>
+    <fields>
+        <fullName>CallDisposition</fullName>
+    </fields>
+    <fields>
+        <fullName>CallDurationInSeconds</fullName>
+    </fields>
+    <fields>
+        <fullName>CallObject</fullName>
+    </fields>
+    <fields>
+        <fullName>CallType</fullName>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+    </fields>
+    <fields>
+        <fullName>Email</fullName>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Phone</fullName>
+    </fields>
+    <fields>
+        <fullName>Priority</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>High</fullName>
+                <default>false</default>
+                <highPriority>true</highPriority>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Normal</fullName>
+                <default>true</default>
+                <highPriority>false</highPriority>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Low</fullName>
+                <default>false</default>
+                <highPriority>false</highPriority>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>RecurrenceInterval</fullName>
+    </fields>
+    <fields>
+        <fullName>RecurrenceRegeneratedType</fullName>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Not Started</fullName>
+                <closed>false</closed>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Progress</fullName>
+                <closed>false</closed>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Completed</fullName>
+                <closed>true</closed>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Waiting on someone else</fullName>
+                <closed>false</closed>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Deferred</fullName>
+                <closed>false</closed>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Subject</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Send Letter</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Send Quote</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Site Visit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Type</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>WhatId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>WhoId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <recordTypes>
+        <fullName>Common</fullName>
+        <active>true</active>
+        <label>Common</label>
+        <picklistValues>
+            <picklist>APS_openSMS__SMS_Status__c</picklist>
+            <values>
+                <fullName>Failure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Success</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CallType__c</picklist>
+            <values>
+                <fullName>Inbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outbound</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Call_Disposition_Custom__c</picklist>
+            <values>
+                <fullName>Answered</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Missed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unanswered</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unreachable</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>DueTime__c</picklist>
+            <values>
+                <fullName>1%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%3A00 AM</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>9%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>EnquirySource__c</picklist>
+            <values>
+                <fullName>CLICK2CALL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DIGITAL MARKETING</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EMAIL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TWG SITE</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Project_Name__c</picklist>
+            <values>
+                <fullName>Aquaria Grande</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Atmosphere</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Celestial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lotus Paradise</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>The Heaven</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Venus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>W54</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Site_Visit_Conducted__c</picklist>
+            <values>
+                <fullName>NO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>YES</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Letter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Quote</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Site Visit</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Task_Type__c</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow-up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Site Visit</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Send_Brochure</fullName>
+        <active>false</active>
+        <label>Send Brochure</label>
+        <picklistValues>
+            <picklist>APS_openSMS__SMS_Status__c</picklist>
+            <values>
+                <fullName>Failure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Success</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CallType__c</picklist>
+            <values>
+                <fullName>Inbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outbound</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Call_Disposition_Custom__c</picklist>
+            <values>
+                <fullName>Answered</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Missed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unanswered</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unreachable</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>DueTime__c</picklist>
+            <values>
+                <fullName>1%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%3A00 AM</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>9%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>EnquirySource__c</picklist>
+            <values>
+                <fullName>CLICK2CALL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DIGITAL MARKETING</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EMAIL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TWG SITE</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Project_Name__c</picklist>
+            <values>
+                <fullName>Aquaria Grande</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Atmosphere</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Celestial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lotus Paradise</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>The Heaven</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Venus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>W54</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Site_Visit_Conducted__c</picklist>
+            <values>
+                <fullName>NO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>YES</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Letter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Quote</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Site Visit</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Task_Type__c</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow-up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Site Visit</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>NoSiteVisitForlLead</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(!BEGINS(WhatId,&apos;006&apos;),ISPICKVAL(Task_Type__c,&quot;Site Visit&quot; )) || (ISBLANK(WhatId))</errorConditionFormula>
+        <errorDisplayField>Task_Type__c</errorDisplayField>
+        <errorMessage>Site Visit tasks can only be created on Opportunity</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>SentAddressOnlyOnOpty</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(!ISBLANK( WhoId ),(Send_Site_Address__c = true))||
+AND(!ISNULL(WhatId), LEFT(WhatId,3)&lt;&gt;&apos;006&apos;, Send_Site_Address__c = true)</errorConditionFormula>
+        <errorDisplayField>Send_Site_Address__c</errorDisplayField>
+        <errorMessage>Site Address can  only be sent  for Opportunity</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>APS_openSMS__Initiate_Chat</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Initiate Chat</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/21.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/21.0/apex.js&quot;)} 
+//var allSmsCount = sforce.connection.query(&quot;Select SentSMS__c from SMSReport__c&quot;); 
+//var smsCount = allSmsCount[&apos;records&apos;][&apos;SentSMS__c&apos;]; 
+var smsCount= 
+sforce.apex.execute(&quot;APS_openSMS.SendSMSws&quot;,&quot;UpdateAlert&quot;,{countsms:1});
+if(smsCount &gt;= 100){
+alert(&apos;You have reached the limit. Please upgrade your package to continue.&apos;);
+}else{
+var queryResult = sforce.connection.query(&quot;Select Id,APS_openSMS__SMS_Chat__c From APS_openSMS__SMS_Gateway__C where APS_openSMS__Default__c =true &quot;);
+var IsSMSChatEnabled=queryResult[&apos;records&apos;][&apos;APS_openSMS__SMS_Chat__c&apos;];
+if(IsSMSChatEnabled==&apos;true&apos;){
+if({!Task.IsReminderSet}==true){
+var name = window.location.hostname; 
+var str=&apos;/apex/APS_openSMS__SMSChat?id={!Task.Who}&amp;TskID={!Task.Id}&apos;;
+
+ChatWindow(&quot;https://&quot;+name+str, &quot;SMS Chat&quot;,300,400);
+
+function ChatWindow(pageURL, title,w,h) {
+var left = (screen.width/2)-(w/2);
+var top = (screen.height/2)-(h/2);
+var targetWin = window.open (pageURL, &apos;title&apos;, &apos;toolbar=no, location=yes, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=&apos;+w+&apos;, height=&apos;+h+&apos;, top=&apos;+top+&apos;, left=&apos;+left);
+targetWin.focus(); 
+}
+}
+else
+{
+//this.disabled=true;
+this.style.visibility=false;
+alert(&apos;Completed Chat cannot be Initiated&apos;);
+}
+}
+else{
+alert(&apos;SMS Chat is not enabled on your default SMS Gateway&apos;);
+}
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>APS_openSMS__Send_SMS</fullName>
+        <availability>online</availability>
+        <description>To send SMS to Contact or Lead from Activity History</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Send SMS</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/29.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/29.0/apex.js&quot;)} 
+//var allSmsCount = sforce.connection.query(&quot;Select APS_openSMS__SentSMS__c from APS_openSMS__SMSReport__c&quot;);
+//var smsCount = allSmsCount[&apos;records&apos;][&apos;APS_openSMS__SentSMS__c&apos;];
+var smsCount= 
+sforce.apex.execute(&quot;APS_openSMS.SendSMSws&quot;,&quot;UpdateAlert&quot;,{countsms:1});
+if(smsCount &gt;= 100){
+alert(&apos;You have reached the limit. Please upgrade your package to continue.&apos;);
+}else{
+var url=parent.location.href; 
+
+var ids= url.split(&quot;/&quot;);
+
+var recordId = ids[3];
+
+var res= recordId.split(&apos;?&apos;);
+
+var result=sforce.apex.execute(&quot;APS_openSMS.SendSMSws&quot;,&quot;redirectSMS&quot;,{strobjId:res[0]});
+var name = window.location.hostname; 
+if(result==1) 
+{ 
+	alert(&apos;No default gateway. Please Configure your Gateway&apos;); 
+} 
+else if(result==2){ 
+	alert(&apos;SMS Opt Out checked, Not possible to send SMS&apos;); 
+} 
+else if(result==3) 
+{ 
+	var str=&apos;/apex/APS_openSMS__contactsendsms?id=&apos; 
+	parent.location.href = &quot;https://&quot;+name+str+res[0]; 
+} 
+else if(result==4) 
+{ 
+	var str=&apos;/apex/APS_openSMS__leadsendsms?id=&apos; 
+	parent.location.href = &quot;https://&quot;+name+str+res[0]; 
+}
+
+else if(result==5)
+{
+ var CaseId=res[0].split(&quot;#&quot;);;
+ var querystr=&apos;select ContactId from Case where Id=&apos;+&apos;\&apos;&apos;+CaseId[0]+&apos;\&apos;&apos;;
+ 
+ var queryResult = sforce.connection.query(querystr);
+  
+ var ContactId=queryResult[&apos;records&apos;][&apos;ContactId&apos;]; 
+
+ if(ContactId!=null &amp;&amp; ContactId!=&apos;&apos; &amp;&amp; ContactId!=undefined){
+ var str=&apos;/apex/APS_openSMS__contactsendsms?id=&apos;;
+ parent.location.href = &quot;https://&quot;+name+str+ContactId; 
+}
+else{
+alert(&apos;No Contact available on selected case&apos;);
+}
+}
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Send_Brochure_Button</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Send Brochure Button</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/13.0/connection.js&quot;)} 
+
+var taskObj = new sforce.SObject(&quot;Task&quot;); 
+taskObj.Status = &apos;Completed&apos;; 
+taskObj.Task_Type__c =&apos;Send Brochure&apos;; 
+taskObj.Priority =&apos;Normal&apos;; 
+taskObj.Subject =&apos;Send Brochure&apos;; 
+taskObj.RecordTypeId = &apos;01290000000muv3&apos;;
+taskObj.who = {!Lead.Id};
+
+var result = sforce.connection.create([taskObj]); 
+
+if (result[0].success==&apos;false&apos;) { 
+alert(result[0].errors.message); 
+} else { 
+var newURL = &apos;/&apos; + result[0].id + &apos;/e&apos;; 
+window.top.location = newURL; 
+}</url>
+    </webLinks>
+</CustomObject>
